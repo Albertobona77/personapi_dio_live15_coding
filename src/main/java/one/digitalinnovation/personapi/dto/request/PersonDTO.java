@@ -5,8 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Data
@@ -17,15 +20,15 @@ public class PersonDTO {
 
     private long id;
 
-    @NoEmpty
-    @size(min = 2 max = 100)
+    @NotEmpty
+    @Size(max = 100, min = 2)
     private String fristname;
 
-    @NoEmpty
-    @size(min = 2 max = 100)
+    @NotEmpty
+    @Size(max = 100, min = 2)
     private String lastname;
 
-    @NotEmpy
+    @NotEmpty
     @CPF
     private String cpf;
 

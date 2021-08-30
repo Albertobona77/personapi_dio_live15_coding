@@ -8,7 +8,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public class PhoneType {
 
-    HOME(descripion: "Home"),
+    HOME("Home"),
     MOBILE("Mobile"),
     COMMERCIAL("Commercial");
 
