@@ -1,6 +1,5 @@
 package one.digitalinnovation.personapi.dto.request;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,15 +17,15 @@ import java.util.List;
 @NoArgsConstructor
 public class PersonDTO {
 
-    private long id;
+    private Long id;
 
     @NotEmpty
-    @Size(max = 100, min = 2)
-    private String fristname;
+    @Size(min = 2, max = 100)
+    private String firstName;
 
     @NotEmpty
-    @Size(max = 100, min = 2)
-    private String lastname;
+    @Size(min = 2, max = 100)
+    private String lastName;
 
     @NotEmpty
     @CPF

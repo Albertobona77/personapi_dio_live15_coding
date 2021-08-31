@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonService {
+
     private PersonRepository personRepository;
 
     private final PersonMapper personMapper = PersonMapper.INSTANCE;
@@ -65,5 +66,4 @@ public class PersonService {
                 .message(message + id)
                 .build();
     }
-
 }
